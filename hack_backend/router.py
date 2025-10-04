@@ -1,7 +1,7 @@
 from fastapi import APIRouter 
 
 
-router = APIRouter(prefix='/', tags=['upload'])
+router = APIRouter(prefix='', tags=['upload'])
 
 @router.get('/')
 async def root():

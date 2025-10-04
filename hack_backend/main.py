@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
+from router import router as main_router
 
 
 app = FastAPI()
@@ -15,5 +15,13 @@ app.add_middleware(
 )
 
 
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
+@app.get("/api/health")  # Alternative endpoint
+async def api_health():
+    return {"status": "healthy"}
 
 
+app.include_router(main_router)

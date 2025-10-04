@@ -117,3 +117,6 @@ Design sensibility, user experience, aesthetic choices. Is it intuitive? Does it
 ---
 
 **Good luck! 🎉**
+
+
+RUN: docker-compose up --build

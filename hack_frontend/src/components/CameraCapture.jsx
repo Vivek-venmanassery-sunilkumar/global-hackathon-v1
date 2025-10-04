@@ -101,7 +101,7 @@ const CameraCapture = () => {
             formData.append('file', blob, 'capture.jpg');
 
             // Use Axios instead of fetch
-            const uploadResponse = await api.post('/api/upload-photo', formData, {
+            const uploadResponse = await api.post('/upload-photo', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
